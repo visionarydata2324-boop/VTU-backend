@@ -1,0 +1,31 @@
+integrate the vtu api --> done
+integrate payment system ---> done
+develop an algo to collect payment for service before charging our account on the vtu platform
+define services
+Desgin email template for code verification on new signin
+complete user profile `
+
+
+*****************Network ID***********************
+MTN --> 1
+GLO --> 2
+AIRTEL --> 3
+9MOBILE --> 6
+
+
+******Search data by********
+plan
+plan_network
+
+****Flow Plan****
+initiate data buy --> pay to our wallet --> if sucessfull --> take the mobile number and data detail to initiate a buy at the vebdor's platform
+
+export enum NetworkID {
+    MTN_PLAN = 1,
+    AIRTEL_PLAN = 3,
+    GLO_PLAN = 2,
+    "9MOBILE_PLAN" = 6
+}
+
+use these enum as qeury data from user
+
