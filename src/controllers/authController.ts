@@ -90,7 +90,7 @@ class AuthController {
 
     // Ensure template path works after build
     const htmlTemplate = path.resolve(__dirname,
-      "src/email_template/email.html"
+      "../email_template/email.html"
     );
     const htmlContent = fs.readFileSync(htmlTemplate, "utf8");
     console.log({ BrevoKey: API_KEY });
@@ -102,7 +102,7 @@ class AuthController {
     const emailData = {
       sender: {
         name: "Ambituox Data Plug",
-        email: "antwanola29@gmail.com",
+        email: "visionarydata2324@gmail.com",
       },
       to: [{ email: clientEmail }],
       subject: "Authentication Token",
@@ -118,7 +118,22 @@ class AuthController {
       });
       console.log("✅ Email sent:", sendTask.data);
     } catch (error: any) {
-      throw new AppError(error.message);
+       if (error.code === "ENOENT") {
+      throw new AppError("Email template file not found");
+    }
+      // Handle Axios/API errors
+    if (axios.isAxiosError(error)) {
+      const errorMessage = 
+        error.response?.data?.message || 
+        error.response?.data?.error ||
+        error.message;
+      const statusCode = error.response?.status;
+         throw new AppError(
+        `Failed to send email via Brevo (${statusCode}): ${errorMessage}`
+      );
+    }
+    // Handle any other errors
+    throw new AppError(`Failed to send email: ${error.message}`);
     }
   };
   /**

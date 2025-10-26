@@ -7386,3 +7386,34 @@
 {"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-04T11:17:01.115Z"}
 {"level":"info","message":"Server is running on port 3002","timestamp":"2025-10-04T11:17:27.267Z"}
 {"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-04T11:17:27.295Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-25T15:08:02.132Z"}
+{"code":"ETIMEOUT","hostname":"_mongodb._tcp.cluster0.n5axy4s.mongodb.net","level":"error","message":"MongoDB Connection Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.n5axy4s.mongodb.net","stack":"Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.n5axy4s.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:275:17)","syscall":"querySrv","timestamp":"2025-10-25T15:08:32.429Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-25T15:21:47.701Z"}
+{"code":"ETIMEOUT","hostname":"_mongodb._tcp.cluster0.n5axy4s.mongodb.net","level":"error","message":"MongoDB Connection Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.n5axy4s.mongodb.net","stack":"Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.n5axy4s.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:275:17)","syscall":"querySrv","timestamp":"2025-10-25T15:22:17.815Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-25T15:23:26.886Z"}
+{"code":"ETIMEOUT","hostname":"_mongodb._tcp.cluster0.n5axy4s.mongodb.net","level":"error","message":"MongoDB Connection Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.n5axy4s.mongodb.net","stack":"Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.n5axy4s.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:275:17)","syscall":"querySrv","timestamp":"2025-10-25T15:23:56.915Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-25T15:39:46.757Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-25T15:39:57.293Z"}
+{"level":"error","message":"Login error: Invalid email or password","timestamp":"2025-10-25T15:42:16.647Z"}
+{"level":"info","message":"New user registered: oolayiwola@folti.io","timestamp":"2025-10-25T19:23:43.768Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T06:56:24.799Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T06:56:30.642Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T06:57:17.541Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T06:57:22.547Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T06:58:49.898Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T06:59:00.529Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T07:06:47.251Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T07:06:49.821Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T07:17:44.957Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T07:17:51.063Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T07:29:39.573Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T07:29:42.334Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T07:37:57.194Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T07:38:02.704Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T07:43:07.110Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T07:43:10.204Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T07:44:10.213Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T07:44:13.287Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T07:44:29.488Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T07:44:34.322Z"}
+{"level":"info","message":"New user registered: oolayiwola@folti.io","timestamp":"2025-10-26T07:50:06.425Z"}
