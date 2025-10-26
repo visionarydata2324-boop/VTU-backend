@@ -89,8 +89,7 @@ class AuthController {
     const BrevoUri = "https://api.brevo.com/v3/smtp/email";
 
     // Ensure template path works after build
-    const htmlTemplate = path.resolve(
-      process.cwd(),
+    const htmlTemplate = path.resolve(__dirname,
       "src/email_template/email.html"
     );
     const htmlContent = fs.readFileSync(htmlTemplate, "utf8");
@@ -315,7 +314,6 @@ public login = async (
 
     // Get user with password
     const user = await User.findOne({ email }).select("+password");
-    console.log({ user });
     const oldPass = user?.password;
     if (!user || !(await user.comparePassword(password as string))) {
       throw new AppError(
@@ -345,9 +343,8 @@ public login = async (
       isVerified: user.isVerified,
     };
     const token = this.generateToken(tokenPayload);
-    let addWallet = await user.populate("wallet");
-    console.log({ addWallet });
-    if (!addWallet.wallet) {
+    let addWallet = user.wallet
+    if (!addWallet) {
       const createUserWallet = await Wallet.create({
         user: user._id,
         userEmail: user.email,
@@ -364,8 +361,7 @@ public login = async (
         );
       }
       user.wallet = createUserWallet._id;
-      addWallet = await user.save();
-      console.log("Wallet created for ", addWallet.lastName);
+      await user.save();
     }
 
     logger.info(`User logged in: ${email}`);
