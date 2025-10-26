@@ -7427,3 +7427,38 @@
 {"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T09:44:00.847Z"}
 {"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T09:45:07.460Z"}
 {"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T09:45:11.128Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T10:40:58.678Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T10:41:01.470Z"}
+{"level":"info","message":"Verification email sent to: oolayiwola@folti.io","timestamp":"2025-10-26T10:41:54.237Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T11:44:24.877Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T11:44:27.875Z"}
+{"level":"error","message":"Login error: Please verify your email address first","timestamp":"2025-10-26T11:45:05.285Z"}
+{"level":"info","message":"Verification email sent to: oolayiwola@folti.io","timestamp":"2025-10-26T11:45:49.334Z"}
+{"level":"info","message":"Email verified for user: oolayiwola@folti.io","timestamp":"2025-10-26T11:47:01.590Z"}
+{"level":"error","message":"Login error: E11000 duplicate key error collection: VTU.wallets index: user_1 dup key: { user: ObjectId('68fdf6c202625a80e6432e82') }","timestamp":"2025-10-26T11:47:10.796Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T11:55:37.100Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T11:55:43.531Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T11:58:45.066Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T11:58:48.070Z"}
+{"level":"error","message":"Login error: E11000 duplicate key error collection: VTU.wallets index: user_1 dup key: { user: ObjectId('68fdf6c202625a80e6432e82') }","timestamp":"2025-10-26T12:00:09.019Z"}
+{"level":"error","message":"Login error: E11000 duplicate key error collection: VTU.wallets index: user_1 dup key: { user: ObjectId('68fdf6c202625a80e6432e82') }","timestamp":"2025-10-26T12:00:39.625Z"}
+{"level":"error","message":"Login error: E11000 duplicate key error collection: VTU.wallets index: user_1 dup key: { user: ObjectId('68fdf6c202625a80e6432e82') }","timestamp":"2025-10-26T14:03:46.518Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T14:04:51.870Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T14:05:00.330Z"}
+{"level":"info","message":"User logged in: oolayiwola@folti.io","timestamp":"2025-10-26T14:05:00.846Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T14:09:33.701Z"}
+{"code":"ETIMEOUT","hostname":"_mongodb._tcp.cluster0.n5axy4s.mongodb.net","level":"error","message":"MongoDB Connection Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.n5axy4s.mongodb.net","stack":"Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.n5axy4s.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:275:17)","syscall":"querySrv","timestamp":"2025-10-26T14:10:03.725Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T14:38:05.804Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T14:38:33.574Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T14:43:01.533Z"}
+{"code":"ETIMEOUT","hostname":"_mongodb._tcp.cluster0.n5axy4s.mongodb.net","level":"error","message":"MongoDB Connection Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.n5axy4s.mongodb.net","stack":"Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.n5axy4s.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:275:17)","syscall":"querySrv","timestamp":"2025-10-26T14:43:31.556Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T14:50:06.729Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T14:50:12.947Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T14:51:00.088Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T14:51:05.392Z"}
+{"level":"info","message":"User logged in: oolayiwola@folti.io","timestamp":"2025-10-26T14:53:03.658Z"}
+{"level":"info","message":"User logged in: oolayiwola@folti.io","timestamp":"2025-10-26T14:54:40.798Z"}
+{"level":"error","message":"Login error: E11000 duplicate key error collection: VTU.wallets index: user_1 dup key: { user: ObjectId('68fdfcd702625a80e6432e8a') }","timestamp":"2025-10-26T14:56:26.614Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T15:38:28.472Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T15:38:34.456Z"}
+{"level":"error","message":"Login error: E11000 duplicate key error collection: VTU.wallets index: user_1 dup key: { user: ObjectId('68fdfcd702625a80e6432e8a') }","timestamp":"2025-10-26T15:38:38.757Z"}

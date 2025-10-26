@@ -1,31 +1,37 @@
 import mongoose, { Document, Schema, Types } from "mongoose";
-import { Transaction, ITransaction } from "./transactions";
+import { ITransaction } from "./transactions";
 import { IUser } from "./users";
 
-// Interface for the base Wallet document
-interface IWallet {
+// -------------------------------------
+// Wallet Interface
+// -------------------------------------
+export interface IWallet {
   _id?: Types.ObjectId;
   user: Types.ObjectId;
-  userEmail: string; // Optional field for user email
+  userEmail: string;
   balance: number;
   status: "active" | "suspended";
-  currency: string; // Optional field for currency
-  accountReference: string | undefined; // Optional field for account reference
-  lastTransactionReference?: string | undefined;
-  transactions:Array<Types.ObjectId>;
-  getAllAvailableBanks: boolean;
+  currency: string;
+  accountReference?: string;
+  lastTransactionReference?: string;
+  transactions: Types.ObjectId[];
+  getAllAvailableBanks?: boolean;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+// -------------------------------------
+// Mongoose Document Interface
+// -------------------------------------
+export interface IWalletDocument extends IWallet, Document<Types.ObjectId> {
+  _id: Types.ObjectId;
   createdAt: Date;
   updatedAt: Date;
 }
 
-// Interface for Wallet document with Mongoose methods
-interface IWalletDocument extends IWallet, Document<Types.ObjectId> {
-    _id: Types.ObjectId;
-  createdAt: Date;
-  updatedAt: Date;
-}
-
-// Schema definition
+// -------------------------------------
+// Wallet Schema
+// -------------------------------------
 const walletSchema = new Schema<IWalletDocument>(
   {
     user: {
@@ -39,12 +45,11 @@ const walletSchema = new Schema<IWalletDocument>(
       required: true,
       unique: true,
     },
-
     balance: {
       type: Number,
-      required: true,
       default: 0,
       min: 0,
+      required: true,
     },
     status: {
       type: String,
@@ -69,24 +74,33 @@ const walletSchema = new Schema<IWalletDocument>(
         ref: "Transaction",
       },
     ],
+    getAllAvailableBanks: {
+      type: Boolean,
+      default: false,
+    },
   },
-  {
-    timestamps: true,
-  }
+  { timestamps: true }
 );
 
+// -------------------------------------
 // Indexes
-walletSchema.index({ user: 1 });
+// -------------------------------------
+walletSchema.index({ user: 1 }, { unique: true });
+walletSchema.index({ userEmail: 1 }, { unique: true });
 walletSchema.index({ status: 1 });
 
-// Model type with TypeScript generics
+// -------------------------------------
+// Model
+// -------------------------------------
 const Wallet = mongoose.model<IWalletDocument>("Wallet", walletSchema);
 
-// Type for populating references
-interface PopulatedWallet extends Omit<IWallet, "user" | "transactions"> {
-  user: Types.ObjectId | IUser; // Replace IUser with your User interface
-  transactions: Types.ObjectId[] | ITransaction[]; // Replace ITransaction with your Transaction interface
+// -------------------------------------
+// Populated Wallet Type
+// -------------------------------------
+export interface PopulatedWallet
+  extends Omit<IWallet, "user" | "transactions"> {
+  user: IUser;
+  transactions: ITransaction[];
 }
 
-export { IWallet, IWalletDocument, PopulatedWallet };
 export default Wallet;
