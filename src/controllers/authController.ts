@@ -367,6 +367,7 @@ public login = async (
     res.status(200).json({
       status: "success",
       token,
+      user
     });
   } catch (error: any) {
     // Ensure a default status code is used if error.statusCode is undefined
