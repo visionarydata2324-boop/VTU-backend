@@ -19,7 +19,7 @@ authRouter.post('/register', validateRequest, authController.register );
 authRouter.post('/login', validateRequest, authController.login);
 authRouter.post('/verify-email', authController.verifyEmail);
 authRouter.post('/verify-account', authController.verifyAccount);
-authRouter.post('/send-verification-email', authController.sendVerification);
+authRouter.post('/resend-otp', authController.sendVerification);
 authRouter.post('/reset-password', authController.authenticationToken, authController.changePassword);
 
 authRouter.get('/forgot-password-request', authController.resetPasswordRequest)

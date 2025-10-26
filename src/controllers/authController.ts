@@ -282,7 +282,8 @@ class AuthController {
       await this.brevoSendEmail(email, "Verification token", token);
 
       if (user) {
-        const newWallet = await Wallet.create({
+        if (!user.wallet) {
+           const newWallet = await Wallet.create({
           user: user._id,
           userEmail: user.email,
           balance: 0, // default
@@ -292,12 +293,13 @@ class AuthController {
           lastTransactionReference: undefined,
           transactions: [],
         });
-        if(!newWallet){
+         if(!newWallet){
           throw new AppError("unable to create waller", 404)
         }
-        //push wallet ID to user list and save
+          //push wallet ID to user list and save
         user.wallet = newWallet?._id!
         user.save()
+      }
       }
       console.log({userWallet: user})
         //log user registratino
@@ -532,7 +534,7 @@ public login = async (
       if (!user) {
         throw new AppError("User not found", 404, ErrorCodes.AUTH_002);
       }
-      const verificationToken = this.generateOTP();
+      const verificationToken = await this.createVerificationOTP(email);
       // await this.sendVerificationEmail(email, verificationToken, 'Reset token');
       const sendtask = await this.brevoSendEmail(
         email,
