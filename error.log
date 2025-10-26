@@ -1185,3 +1185,5 @@
 {"code":"ETIMEOUT","hostname":"_mongodb._tcp.cluster0.n5axy4s.mongodb.net","level":"error","message":"MongoDB Connection Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.n5axy4s.mongodb.net","stack":"Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.n5axy4s.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:275:17)","syscall":"querySrv","timestamp":"2025-10-26T14:43:31.556Z"}
 {"level":"error","message":"Login error: E11000 duplicate key error collection: VTU.wallets index: user_1 dup key: { user: ObjectId('68fdfcd702625a80e6432e8a') }","timestamp":"2025-10-26T14:56:26.614Z"}
 {"level":"error","message":"Login error: E11000 duplicate key error collection: VTU.wallets index: user_1 dup key: { user: ObjectId('68fdfcd702625a80e6432e8a') }","timestamp":"2025-10-26T15:38:38.757Z"}
+{"level":"error","message":"Login error: Invalid email or password","timestamp":"2025-10-26T15:56:24.732Z"}
+{"level":"error","message":"Login error: Invalid email or password","timestamp":"2025-10-26T15:56:54.692Z"}

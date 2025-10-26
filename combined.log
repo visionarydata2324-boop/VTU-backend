@@ -7462,3 +7462,18 @@
 {"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T15:38:28.472Z"}
 {"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T15:38:34.456Z"}
 {"level":"error","message":"Login error: E11000 duplicate key error collection: VTU.wallets index: user_1 dup key: { user: ObjectId('68fdfcd702625a80e6432e8a') }","timestamp":"2025-10-26T15:38:38.757Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T15:54:43.202Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T15:54:46.971Z"}
+{"level":"info","message":"User logged in: adeyemicodes@gmail.com","timestamp":"2025-10-26T15:54:58.543Z"}
+{"level":"error","message":"Login error: Invalid email or password","timestamp":"2025-10-26T15:56:24.732Z"}
+{"level":"error","message":"Login error: Invalid email or password","timestamp":"2025-10-26T15:56:54.692Z"}
+{"level":"info","message":"User logged in: oolayiwola@folti.io","timestamp":"2025-10-26T15:58:29.713Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T16:11:55.827Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T16:11:58.878Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T16:41:04.795Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T16:41:14.080Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T16:41:17.343Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T16:41:31.344Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T16:41:34.122Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-10-26T16:43:43.067Z"}
+{"level":"info","message":"MongoDB Connected using development","timestamp":"2025-10-26T16:43:48.265Z"}
