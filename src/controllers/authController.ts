@@ -297,7 +297,8 @@ class AuthController {
           throw new AppError("unable to create waller", 404)
         }
           //push wallet ID to user list and save
-        user.wallet = newWallet?._id!
+          console.log({newWallet})
+        user.wallet = newWallet?._id
         user.save()
       }
       }
@@ -360,33 +361,12 @@ public login = async (
       isVerified: user.isVerified,
     };
     const token = this.generateToken(tokenPayload);
-    let addWallet = user.wallet
-    if (!addWallet) {
-      const createUserWallet = await Wallet.create({
-        user: user._id,
-        userEmail: user.email,
-        balance: 0,
-        status: "active",
-        accountReference: await walletController.generateReference(),
-        lastTransactionReference: null,
-        transactions: null,
-      });
-      if (!createUserWallet) {
-        throw new AppError(
-          "Could not create user wallet. Kindly retry login",
-          409
-        );
-      }
-      user.wallet = createUserWallet._id;
-      await user.save();
-    }
 
     logger.info(`User logged in: ${email}`);
 
     res.status(200).json({
       status: "success",
       token,
-      data: addWallet,
     });
   } catch (error: any) {
     // Ensure a default status code is used if error.statusCode is undefined
